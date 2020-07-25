@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2020 at 10:11 AM
+-- Generation Time: Jul 25, 2020 at 12:49 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -38,8 +38,9 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`id`, `nama`, `alamat`) VALUES
-(1, 'Widya W', 'Subang, Jawa Barat'),
-(6, 'Sana Kardi', 'Kp.ciwera RT 04 RW 02');
+(1, 'Widya Widd', 'Subang, Jawa Barat'),
+(6, 'Sana Kardi', 'Kp.ciwera RT 04 RW 02'),
+(9, 'heru ggg', 'Kp.ciwera RT 04 RW 02');
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,8 @@ CREATE TABLE `estimasi` (
 INSERT INTO `estimasi` (`id`, `biaya_material`) VALUES
 (1, '100006'),
 (2, '20000'),
-(3, '666');
+(3, '66666675'),
+(4, '100000088');
 
 -- --------------------------------------------------------
 
@@ -127,7 +129,8 @@ CREATE TABLE `order` (
 
 INSERT INTO `order` (`id`, `no_order`, `tgl_order`, `nama_konsumen`, `nama_project`) VALUES
 (1, 12234, '2020-07-12', 'Hasanul', 'Project '),
-(2, 11123, '2020-07-09', 'hilman', 'Project B');
+(2, 11123, '2020-07-09', 'hilman mm', 'Project B'),
+(3, 0, '2020-07-02', 'Hasanul', 'Project B');
 
 -- --------------------------------------------------------
 
@@ -148,21 +151,30 @@ CREATE TABLE `pembayaran` (
 --
 
 INSERT INTO `pembayaran` (`id`, `no_order`, `tgl_order`, `jenis_pembayaran`, `nominal_pembayaran`) VALUES
-(1, 'P-01', '2020-07-01', 'Pembayaran A', '20000'),
-(2, 'P-02', '2020-07-02', 'Pembayaran B', '10000'),
-(3, 'P-03', '2020-07-03', 'Pembayaran C', '30000'),
+(1, 'P-01', '2020-07-01', 'Pembayaran D', '80000'),
+(2, 'P-02', '2020-07-02', 'Pembayaran A', '10000'),
+(3, 'P-03', '2020-07-03', 'Pembayaran D', '30000'),
 (4, 'P-04', '2020-07-04', 'Pembayaran A', '40000'),
 (5, 'P-05', '2020-07-05', 'Pembayaran B', '5000'),
-(6, 'P-06', '2020-07-06', 'Pembayaran A', '10000'),
-(7, 'P-07', '2020-07-07', 'Pembayaran A', '20000'),
-(8, 'P-08', '2020-07-08', 'Pembayaran A', '10000'),
+(6, 'P-06', '2020-07-06', 'Pembayaran B', '10000'),
+(7, 'P-07', '2020-07-07', 'Pembayaran B', '20000'),
+(8, 'P-08', '2020-07-08', 'Pembayaran B', '10000'),
 (9, 'P-09', '2020-07-09', 'Pembayaran B', '50000'),
-(10, 'P-10', '2020-07-10', 'Pembayaran C', '10000'),
+(10, 'P-10', '2020-07-10', 'Pembayaran D', '10000'),
 (11, 'P-11', '2020-07-11', 'Pembayaran B', '30000'),
 (12, 'P-12', '2020-07-11', 'Pembayaran C', '30000'),
 (13, 'P-13', '2020-07-12', 'Pembayaran B', '10000'),
-(14, 'P-14', '2020-07-13', 'Pembayaran C', '10000'),
-(15, 'P-15', '2020-07-14', 'Pembayaran D', '30000');
+(14, 'P-14', '2020-07-13', 'Pembayaran D', '10000'),
+(15, 'P-15', '2020-07-14', 'Pembayaran D', '30000'),
+(16, 'P-017', '2020-07-04', 'Pembayaran D', '600'),
+(17, 'P-018', '2020-06-29', 'Pembayaran B', '80000'),
+(18, 'P-019', '2020-07-02', 'Pembayaran D', '600'),
+(19, 'P-020', '2020-07-09', 'Pembayaran A', '8000000'),
+(20, 'P-022', '2020-07-11', 'Pembayaran B', '80000'),
+(21, 'P-023', '2020-07-15', 'Pembayaran C', '8000000'),
+(22, 'P-023', '2020-07-15', 'Pembayaran D', '8000000'),
+(23, 'P-024', '2020-06-29', 'Pembayaran B', '8000000'),
+(24, 'P-028', '2020-07-09', 'Pembayaran B', '600');
 
 -- --------------------------------------------------------
 
@@ -267,7 +279,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `dashboard`
@@ -279,7 +291,7 @@ ALTER TABLE `dashboard`
 -- AUTO_INCREMENT for table `estimasi`
 --
 ALTER TABLE `estimasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `modal`
@@ -291,13 +303,13 @@ ALTER TABLE `modal`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `user`
