@@ -71,23 +71,19 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <!-- Nav Item - Pages Collapse Menu -->
+
+
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Logout
+    </div>
+
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Kelola Akun</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#"> <i class="fas fa-plus"></i> <span>Tambah Akun</span></a>
-            </div>
-        </div>
+        <a class="nav-link" href="<?= base_url('auth/logout') ?>">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span></a>
     </li>
-
-
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -100,38 +96,61 @@
 </ul>
 <!-- End of Sidebar -->
 
-<!-- <script type="text/javascript">
-    $(document).ready(function(){
-        $('ul li ').click(function(){
-            $('li').removeClass("active");
-            $(this).addClass("active");
-        });
-    });
-</script> -->
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
 
-<div class="container">
+    <!-- Main Content -->
+    <div id="content">
 
-    <div class="row mt-3">
+        <div class="container">
+            <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <?php if ($this->session->flashdata('flash')) : ?>
+                <!-- <div class="row mt-3">
         <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+<strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+            <?php endif; ?>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-            <div class="card">
-                <div class="card-header text-center">
-                    Form Tambah Data Estimasi
-                </div>
-                <div class="card-body">
-                    <form action="" method="post">
-                        <div class="form-group">
-                            <label for="biaya_material">Biaya Material</label>
-                            <input type="text" name="biaya_material" class="form-control" id="biaya_material">
-                            <small class="form-text text-danger"><?= form_error('biaya_material'); ?></small>
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800"> Kelola Data Estimasi</h1>
+
+                <!-- Data Tabel Estimasi -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"><a href="<?= base_url('estimasi'); ?>" class="btn btn-primary">Kembali</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header text-center">
+                            <h3>Form Tambah Estimasi Baru</h3>
                         </div>
-                        <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah</button>
-                    </form>
+                        <div class="card-body">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label for="biaya_material">Biaya Material : </label>
+                                    <input type="text" name="biaya_material" class="form-control" id="biaya_material">
+                                    <small class="form-text text-danger"><?= form_error('biaya_material'); ?></small>
+                                </div>
+                                <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
     </div>
-
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Perencanaan Modal <?= date('Y'); ?></span>
+            </div>
+        </div>
+    </footer>
 </div>

@@ -107,21 +107,63 @@
     });
 </script> -->
 
-<div class="container">
-    <div class="row mt-3">
-        <div class="col-md-6">
 
-            <div class="card">
-                <div class="card-header text-center">
-                    Detail Data Modal
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><?= $modal['biaya_material']; ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $modal['biaya_pegawai']; ?></h6>
-                    <a href="<?= base_url(); ?>modal" class="btn btn-primary">Kembali</a>
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <div class="container">
+            <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <?php if ($this->session->flashdata('flash')) : ?>
+                <!-- <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+<strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+            <?php endif; ?>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800"> Kelola Data Modal</h1>
+                <!-- Data Tabel Modal -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"><a href="<?= base_url('modal'); ?>" class="btn btn-primary">Kembali</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="card-header text-center font-weight-bold">
+                                <h3>Detail Data Modal</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Biaya Material</th>
+                                                <th>: <?= $modal['biaya_material']; ?></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <th>Biaya Pegawai</th>
+                                            <th>: <?= $modal['biaya_pegawai']; ?></th>
+                                        </tbody>
+                                        <th</th> <th>
+                                            </th>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

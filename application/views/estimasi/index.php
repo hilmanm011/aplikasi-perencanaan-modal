@@ -71,23 +71,19 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <!-- Nav Item - Pages Collapse Menu -->
+
+
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Logout
+    </div>
+
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Kelola Akun</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#"> <i class="fas fa-plus"></i> <span>Tambah Akun</span></a>
-            </div>
-        </div>
+        <a class="nav-link" href="<?= base_url('auth/logout') ?>">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span></a>
     </li>
-
-
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -166,7 +162,8 @@
                                             <td><?= $no;
                                                 $no++; ?></td>
                                             <td><?= $est['biaya_material']; ?></td>
-                                            <td><a href="<?= base_url(); ?>estimasi/detail/<?= $est['id']; ?>" class="badge badge-primary float-center">Detail</a>
+                                            <td>
+                                                <!-- <a href="<?= base_url(); ?>estimasi/detail/<?= $est['id']; ?>" class="badge badge-primary float-center">Detail</a> -->
                                                 <a href="<?= base_url(); ?>estimasi/ubah/<?= $est['id']; ?>" class="badge badge-success float-center">Edit</a>
                                                 <a href="<?= base_url(); ?>estimasi/hapus/<?= $est['id']; ?>" class="tombol-hapus badge badge-danger float-center">Hapus</a>
                                             </td>

@@ -107,23 +107,70 @@
     });
 </script> -->
 
-<div class="container">
-    <div class="row mt-3">
-        <div class="col-md-6">
 
-            <div class="card">
-                <div class="card-header text-center">
-                    Detail Data Pembayaran
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><?= $pembayaran['no_order']; ?></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $pembayaran['tgl_order']; ?></h6>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $pembayaran['nominal_pembayaran']; ?></h6>
-                    <h6 class="card-subtitle mb-2 text-muted"><?= $pembayaran['jenis_pembayaran']; ?></h6>
-                    <a href="<?= base_url(); ?>pembayaran" class="btn btn-primary">Kembali</a>
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <div class="container">
+            <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <?php if ($this->session->flashdata('flash')) : ?>
+                <!-- <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+<strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+            <?php endif; ?>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800"> Kelola Data Pembayaran</h1>
+                <!-- Data Tabel Pembayaran -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"><a href="<?= base_url('pembayaran'); ?>" class="btn btn-primary">Kembali</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="card-header text-center font-weight-bold">
+                                <h3>Detail Data Pembayaran</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Nomor Order</th>
+                                                <th>: <?= $pembayaran['no_order']; ?></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <th>Tanggal Order</th>
+                                            <th>: <?= $pembayaran['tgl_order']; ?></th>
+                                        </tbody>
+                                        <tbody>
+                                            <th>Nominal Pembayaran</th>
+                                            <th>: <?= $pembayaran['nominal_pembayaran']; ?></th>
+                                        </tbody>
+                                        <tbody>
+                                            <th>Jenis Pembayaran</th>
+                                            <th>: <?= $pembayaran['jenis_pembayaran']; ?></th>
+                                        </tbody>
+                                        <th</th> <th>
+                                            </th>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

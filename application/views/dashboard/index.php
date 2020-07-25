@@ -306,7 +306,7 @@
                         <!--Load chart js-->
                         <script type="text/javascript" src="<?php echo base_url() . 'assets/chartjs/chart.min.js' ?>"></script>
                         <script>
-                            var lineChartData = {
+                            var barChartData = {
                                 labels: <?php echo json_encode($jenis_pembayaran); ?>,
                                 datasets: [{
                                     fillColor: "#1cc88a",
@@ -318,7 +318,7 @@
                                     data: <?php echo json_encode($nominal_pembayaran); ?>
                                 }]
                             }
-                            var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+                            var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
                         </script>
                     </div>
                 </div>
@@ -335,3 +335,4 @@
             </div>
         </div>
     </footer>
+</div>

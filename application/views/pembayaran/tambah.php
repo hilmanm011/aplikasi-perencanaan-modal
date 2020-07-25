@@ -107,44 +107,81 @@
     });
 </script> -->
 
-<div class="container">
 
-    <div class="row mt-3">
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <div class="container">
+            <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+            <?php if ($this->session->flashdata('flash')) : ?>
+                <!-- <div class="row mt-3">
         <div class="col-md-6">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+<strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+            <?php endif; ?>
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-            <div class="card">
-                <div class="card-header text-center">
-                    Form Tambah Data Pembayaran
-                </div>
-                <div class="card-body">
-                    <form action="" method="post">
-                        <div class="form-group">
-                            <label for="no_order">Nomor Order</label>
-                            <input type="number" name="no_order" class="form-control" id="no_order">
-                            <small class="form-text text-danger"><?= form_error('no_order'); ?></small>
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800"> Kelola Data Pembayaran</h1>
+
+                <!-- Data Tabel Pembayaran -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary"><a href="<?= base_url('pembayaran'); ?>" class="btn btn-primary">Kembali</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header text-center">
+                            <h3>Form Tambah Data Pembayaran</h3>
                         </div>
-                        <div class="form-group">
-                            <label for="tgl_order">Tanggal Order</label>
-                            <input type="date" name="tgl_order" class="form-control" id="tgl_order">
-                            <small class="form-text text-danger"><?= form_error('tgl_order'); ?></small>
+                        <div class="card-body">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label for="no_order">Nomor Order : </label>
+                                    <input type="text" name="no_order" class="form-control" id="no_order">
+                                    <small class="form-text text-danger"><?= form_error('no_order'); ?></small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tgl_order">Tanggal Order : </label>
+                                    <input type="date" name="tgl_order" class="form-control" id="tgl_order">
+                                    <small class="form-text text-danger"><?= form_error('tgl_order'); ?></small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nominal_pembayaran">Nominal Pembayaran :</label>
+                                    <input type="text" name="nominal_pembayaran" class="form-control" id="nominal_pembayaran">
+                                    <small class="form-text text-danger"><?= form_error('nominal_pembayaran'); ?></small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="jenis_pembayaran">Jenis Pembayaran :</label>
+                                    <select type="text" name="jenis_pembayaran" class="custom-select" id="jenis_pembayaran">
+                                        <option value="Pembayaran A">Pembayaran A</option>
+                                        <option value="Pembayaran B">Pembayaran B</option>
+                                        <option value="Pembayaran C">Pembayaran C</option>
+                                        <option value="Pembayaran D">Pembayaran D</option>
+                                    </select>
+                                </div>
+                                <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <label for="nominal_pembayaran">Nominal Pembayaran</label>
-                            <input type="text" name="nominal_pembayaran" class="form-control" id="nominal_pembayaran">
-                            <small class="form-text text-danger"><?= form_error('nominal_pembayaran'); ?></small>
-                        </div>
-                        <div class="form-group">
-                            <label for="jenis_pembayaran">Jenis Pembayaran</label>
-                            <input type="text" name="jenis_pembayaran" class="form-control" id="jenis_pembayaran">
-                            <small class="form-text text-danger"><?= form_error('jenis_pembayaran'); ?></small>
-                        </div>
-                        <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-
-
         </div>
     </div>
-
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Perencanaan Modal <?= date('Y'); ?></span>
+            </div>
+        </div>
+    </footer>
 </div>
