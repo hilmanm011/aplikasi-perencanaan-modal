@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Laporan Perusahaan</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Laporan Perusahaan </title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/'); ?>img/ppm.png" />
 
 </head>
 
 
 <body>
 
-    <div class="text-center">
+    <div class=" mx-auto text-center">
         <h1>Laporan Perusahaan</h1>
         <table style="text-align: center" border="1">
             <thead>
