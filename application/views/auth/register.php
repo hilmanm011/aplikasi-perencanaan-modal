@@ -4,7 +4,10 @@
         <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img width="500" height="450" src="<?php echo base_url() . 'assets/img/in-ppm.jpg' ?>" alt="">
+                </div>
+                <!-- <div class="col-lg-5 d-none d-lg-block bg-register-image"></div> -->
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
@@ -35,9 +38,9 @@
                             </button>
                         </form>
                         <hr>
-                        <div class="text-center">
+                        <!-- <div class="text-center">
                             <a class="small" href="forgot-password.html">Forgot Password?</a>
-                        </div>
+                        </div> -->
                         <div class="text-center">
                             <a class="small" href="<?= base_url('auth/index') ?>">Already have an account? Login!</a>
                         </div>

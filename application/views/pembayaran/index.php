@@ -163,7 +163,7 @@
                                         <tr>
                                             <td class="text-center"><?= $no;
                                                                     $no++; ?></td>
-                                            <td><?= $pmbr['no_order']; ?></td>
+                                            <td class="text-center"><?= $pmbr['no_order']; ?></td>
                                             <td><?= $pmbr['tgl_order']; ?></td>
                                             <td><?= $pmbr['nominal_pembayaran']; ?></td>
                                             <td><?= $pmbr['jenis_pembayaran']; ?></td>

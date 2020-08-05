@@ -301,7 +301,7 @@
 
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h5 class="text-center" style="color: #1cc88a;">Informasi Statistik Pembayaran</h5>
+                        <h5 class="text-center" style="color: #1cc88a;">Informasi Statistik Jumlah Berdasarkan Jenis Pembayaran</h5>
                         <canvas class="content-right" id="canvas" width="1000" height="280"></canvas>
                         <!--Load chart js-->
                         <script type="text/javascript" src="<?php echo base_url() . 'assets/chartjs/chart.min.js' ?>"></script>

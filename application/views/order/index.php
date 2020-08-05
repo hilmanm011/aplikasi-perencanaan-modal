@@ -165,7 +165,7 @@
                                         <tr>
                                             <td class="text-center"><?= $no;
                                                                     $no++; ?></td>
-                                            <td><?= $ord['no_order']; ?></td>
+                                            <td class="text-center"><?= $ord['no_order']; ?></td>
                                             <td><?= $ord['tgl_order']; ?></td>
                                             <td><?= $ord['nama_konsumen']; ?></td>
                                             <td><?= $ord['nama_project']; ?></td>
