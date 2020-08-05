@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2020 at 06:03 PM
+-- Generation Time: Aug 05, 2020 at 08:11 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -117,7 +117,7 @@ INSERT INTO `modal` (`id`, `biaya_material`, `biaya_pegawai`) VALUES
 
 CREATE TABLE `order` (
   `id` int(11) NOT NULL,
-  `no_order` int(125) NOT NULL,
+  `no_order` varchar(125) NOT NULL,
   `tgl_order` date NOT NULL,
   `nama_konsumen` varchar(125) NOT NULL,
   `nama_project` varchar(125) NOT NULL
@@ -128,9 +128,9 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`id`, `no_order`, `tgl_order`, `nama_konsumen`, `nama_project`) VALUES
-(1, 12234, '2020-07-12', 'Hasanul', 'Project '),
-(2, 11123, '2020-07-09', 'hilman mm', 'Project B'),
-(3, 0, '2020-07-02', 'Hasanul', 'Project B');
+(1, 'Order-01', '2020-07-12', 'Hasanul', 'Project '),
+(2, 'Order-02', '2020-07-09', 'hilman mm', 'Project B'),
+(3, 'Order-03', '2020-07-02', 'Hasanul', 'Project B');
 
 -- --------------------------------------------------------
 
