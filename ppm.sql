@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2020 at 12:49 PM
+-- Generation Time: Aug 05, 2020 at 06:03 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -151,8 +151,8 @@ CREATE TABLE `pembayaran` (
 --
 
 INSERT INTO `pembayaran` (`id`, `no_order`, `tgl_order`, `jenis_pembayaran`, `nominal_pembayaran`) VALUES
-(1, 'P-01', '2020-07-01', 'Pembayaran D', '80000'),
-(2, 'P-02', '2020-07-02', 'Pembayaran A', '10000'),
+(1, 'P-01', '2020-07-01', 'Pembayaran D', '8000'),
+(2, 'P-02', '2020-07-02', 'Pembayaran A', '1000'),
 (3, 'P-03', '2020-07-03', 'Pembayaran D', '30000'),
 (4, 'P-04', '2020-07-04', 'Pembayaran A', '40000'),
 (5, 'P-05', '2020-07-05', 'Pembayaran B', '5000'),

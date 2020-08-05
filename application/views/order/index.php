@@ -4,7 +4,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dashboard/index') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="far fa-save"></i>
+            <i class="fas fa-business-time"></i>
         </div>
         <div class="sidebar-brand-text mx-3">P P M </div>
     </a>
