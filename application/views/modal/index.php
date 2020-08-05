@@ -142,11 +142,11 @@
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead class="thead-light">
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>No</th>
                                         <th>Biaya Material</th>
                                         <th>Biaya Pegawai</th>
-                                        <th></th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
 
@@ -161,11 +161,11 @@
                                     $no = 1;
                                     foreach ($modal as $mdl) : ?>
                                         <tr>
-                                            <td><?= $no;
-                                                $no++; ?></td>
+                                            <td class="text-center"><?= $no;
+                                                                    $no++; ?></td>
                                             <td><?= $mdl['biaya_material']; ?></td>
                                             <td><?= $mdl['biaya_pegawai']; ?></td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="<?= base_url(); ?>modal/detail/<?= $mdl['id']; ?>" class="badge badge-primary float-center">Detail</a>
                                                 <a href="<?= base_url(); ?>modal/ubah/<?= $mdl['id']; ?>" class="badge badge-success float-center">Edit</a>
                                                 <a href="<?= base_url(); ?>modal/hapus/<?= $mdl['id']; ?>" class="tombol-hapus badge badge-danger float-center">Hapus</a>
@@ -178,12 +178,11 @@
             </div>
         </div>
     </div>
-</div>
-</div>
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Perencanaan Modal <?= date('Y'); ?></span>
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Perencanaan Modal <?= date('Y'); ?></span>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>

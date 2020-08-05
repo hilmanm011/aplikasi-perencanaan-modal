@@ -142,11 +142,11 @@
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead class="thead-light">
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>No</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
-                                        <th></th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -160,11 +160,11 @@
                                     $no = 1;
                                     foreach ($akun as $akn) : ?>
                                         <tr>
-                                            <td><?= $no;
-                                                $no++; ?></td>
+                                            <td class="text-center"><?= $no;
+                                                                    $no++; ?></td>
                                             <td><?= $akn['nama']; ?></td>
                                             <td><?= $akn['alamat']; ?></td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href="<?= base_url(); ?>akun/detail/<?= $akn['id']; ?>" class="badge badge-primary float-center">Detail</a>
                                                 <a href="<?= base_url(); ?>akun/ubah/<?= $akn['id']; ?>" class="badge badge-success float-center">Edit</a>
 

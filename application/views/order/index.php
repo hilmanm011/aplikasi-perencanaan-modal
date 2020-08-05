@@ -142,13 +142,13 @@
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead class="thead-light">
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>No</th>
                                         <th>Nomor Order</th>
                                         <th>Tanggal Order</th>
                                         <th>Nama Konsumen</th>
                                         <th>Nama Project</th>
-                                        <th></th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
 
@@ -163,13 +163,13 @@
                                     $no = 1;
                                     foreach ($order as $ord) : ?>
                                         <tr>
-                                            <td><?= $no;
-                                                $no++; ?></td>
+                                            <td class="text-center"><?= $no;
+                                                                    $no++; ?></td>
                                             <td><?= $ord['no_order']; ?></td>
                                             <td><?= $ord['tgl_order']; ?></td>
                                             <td><?= $ord['nama_konsumen']; ?></td>
                                             <td><?= $ord['nama_project']; ?></td>
-                                            <td><a href="<?= base_url(); ?>order/detail/<?= $ord['id']; ?>" class="badge badge-primary float-center">Detail</a>
+                                            <td class="text-center"><a href="<?= base_url(); ?>order/detail/<?= $ord['id']; ?>" class="badge badge-primary float-center">Detail</a>
                                                 <a href="<?= base_url(); ?>order/ubah/<?= $ord['id']; ?>" class="badge badge-success float-center">Edit</a>
                                                 <a href="<?= base_url(); ?>order/hapus/<?= $ord['id']; ?>" class="tombol-hapus badge badge-danger float-center">Hapus</a>
                                             </td>
@@ -181,15 +181,11 @@
             </div>
         </div>
     </div>
-</div>
-</div>
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Perencanaan Modal <?= date('Y'); ?></span>
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Perencanaan Modal <?= date('Y'); ?></span>
+            </div>
         </div>
-    </div>
-</footer>
-
-
+    </footer>
 </div>
