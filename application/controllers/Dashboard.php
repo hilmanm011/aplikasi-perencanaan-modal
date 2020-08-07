@@ -21,6 +21,8 @@ class Dashboard extends CI_Controller
         $data['order'] = $this->Order_model->getJmlOrder();
         $data['pembayaran'] = $this->Pembayaran_model->getJmlPembayaran();
         $data['data'] = $this->M_grafik->get_data_nominal();
+        $data['user'] =  $this->db->get_where('user', ['username' =>
+        $this->session->userdata('username')])->row_array();
 
         // $data['estimasi'] = $this->Estimasi_model->getJmlEstimasi();
 

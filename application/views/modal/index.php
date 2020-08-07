@@ -163,8 +163,8 @@
                                         <tr>
                                             <td class="text-center"><?= $no;
                                                                     $no++; ?></td>
-                                            <td><?= $mdl['biaya_material']; ?></td>
-                                            <td><?= $mdl['biaya_pegawai']; ?></td>
+                                            <td><?= "Rp. " .  $mdl['biaya_material']; ?></td>
+                                            <td><?= "Rp. " .  $mdl['biaya_pegawai']; ?></td>
                                             <td class="text-center">
                                                 <a href="<?= base_url(); ?>modal/detail/<?= $mdl['id']; ?>" class="badge badge-primary float-center">Detail</a>
                                                 <a href="<?= base_url(); ?>modal/ubah/<?= $mdl['id']; ?>" class="badge badge-success float-center">Edit</a>

@@ -163,10 +163,8 @@
                                 <div class="form-group">
                                     <label for="jenis_pembayaran">Jenis Pembayaran :</label>
                                     <select type="text" name="jenis_pembayaran" class="custom-select" id="jenis_pembayaran">
-                                        <option value="Pembayaran A">Pembayaran A</option>
-                                        <option value="Pembayaran B">Pembayaran B</option>
-                                        <option value="Pembayaran C">Pembayaran C</option>
-                                        <option value="Pembayaran D">Pembayaran D</option>
+                                        <option value="Cash">Cash</option>
+                                        <option value="Tempo">Tempo</option>
                                     </select>
                                 </div>
                                 <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah</button>

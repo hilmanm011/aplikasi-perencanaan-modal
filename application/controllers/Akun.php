@@ -17,7 +17,6 @@ class Akun extends CI_Controller
             $data['akun'] = $this->Akun_model->cariDataAkun();
         }
         $this->load->view('templates/header', $data);
-        // $this->load->view('templates/sidebar', $data);
         $this->load->view('akun/index', $data);
         $this->load->view('templates/footer');
     }

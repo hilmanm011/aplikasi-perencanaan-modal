@@ -161,7 +161,7 @@
                                         <tr>
                                             <td class="text-center"><?= $no;
                                                                     $no++; ?></td>
-                                            <td><?= $est['biaya_material']; ?></td>
+                                            <td><?= "Rp. " .  $est['biaya_material']; ?></td>
                                             <td class="text-center">
                                                 <!-- <a href="<?= base_url(); ?>estimasi/detail/<?= $est['id']; ?>" class="badge badge-primary float-center">Detail</a> -->
                                                 <a href="<?= base_url(); ?>estimasi/ubah/<?= $est['id']; ?>" class="badge badge-success float-center">Edit</a>

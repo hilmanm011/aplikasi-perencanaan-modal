@@ -165,7 +165,7 @@
                                                                     $no++; ?></td>
                                             <td class="text-center"><?= $pmbr['no_order']; ?></td>
                                             <td><?= $pmbr['tgl_order']; ?></td>
-                                            <td><?= $pmbr['nominal_pembayaran']; ?></td>
+                                            <td><?= "Rp. " . $pmbr['nominal_pembayaran']; ?></td>
                                             <td><?= $pmbr['jenis_pembayaran']; ?></td>
                                             <td class="text-center"><a href="<?= base_url(); ?>pembayaran/detail/<?= $pmbr['id']; ?>" class="badge badge-primary float-center">Detail</a>
                                                 <a href="<?= base_url(); ?>pembayaran/ubah/<?= $pmbr['id']; ?>" class="badge badge-success float-center">Edit</a>

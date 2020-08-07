@@ -59,7 +59,7 @@ class Pembayaran extends CI_Controller
     {
         $data['title'] = 'Form Ubah Data Pembayaran';
         $data['pembayaran'] = $this->Pembayaran_model->getPembayaranById($id);
-        $data['pm'] = ['Pembayaran A', 'Pembayaran B', 'Pembayaran C', 'Pembayaran D'];
+        $data['pm'] = ['Cash', 'Tempo'];
 
 
         $this->form_validation->set_rules('no_order', 'No_order', 'required');
