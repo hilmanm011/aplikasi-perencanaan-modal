@@ -103,15 +103,6 @@
 </ul>
 <!-- End of Sidebar -->
 
-<!-- <script type="text/javascript">
-    $(document).ready(function(){
-        $('ul li ').click(function(){
-            $('li').removeClass("active");
-            $(this).addClass("active");
-        });
-    });
-</script> -->
-
 
 <div class="container">
     <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>

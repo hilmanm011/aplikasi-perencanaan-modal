@@ -205,4 +205,9 @@ class Auth extends CI_Controller
         $this->session->unset_userdata('role_id');
         redirect('auth');
     }
+
+    public function blocked()
+    {
+        $this->load->view('blocked');
+    }
 }

@@ -5,72 +5,78 @@ class Konsumen extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Estimasi_model');
+        $this->load->model('Order_model');
         $this->load->library('form_validation');
+        // is_logged_in();
     }
 
     public function index()
     {
-        $data['title'] = 'Home Konsumen';
-        $data['estimasi'] = $this->Estimasi_model->getAllEstimasi();
+        $data['title'] = 'Home Konsumen ';
+        $data['order'] = $this->Order_model->getAllOrder();
+        $data['user'] =  $this->db->get_where('user', ['username' =>
+        $this->session->userdata('username')])->row_array();
+
         if ($this->input->post('keyword')) {
-            $data['estimasi'] = $this->Estimasi_model->cariDataEstimasi();
+            $data['order'] = $this->Order_model->cariDataOrder();
         }
         $this->load->view('templates/header', $data);
-        $this->load->view('konsumen/index', $data);
+
+        $this->load->view('k_order/index', $data);
         $this->load->view('templates/footer');
     }
 
-    // public function tambah()
-    // {
-    //     $data['title'] = 'Form Tambah Data estimasi';
+    public function tambah()
+    {
+        $data['title'] = 'Form Tambah Data Order';
+        $data['order'] = $this->Order_model->getAllOrder();
 
-    //     $this->form_validation->set_rules('biaya_material', 'Biaya_material', 'required');
-
-
-    //     if ($this->form_validation->run() == false) {
-    //         $this->load->view('templates/header', $data);
-    //         $this->load->view('estimasi/tambah');
-    //         $this->load->view('templates/footer');
-    //     } else {
-    //         $this->Estimasi_model->tambahDataEstimasi();
-    //         $this->session->set_flashdata('flash', 'Ditambahkan');
-    //         redirect('estimasi');
-    //     }
-    // }
-
-    // public function hapus($id)
-    // {
-    //     $this->Estimasi_model->hapusDataEstimasi($id);
-    //     $this->session->set_flashdata('flash', 'Dihapus');
-    //     redirect('estimasi');
-    // }
-
-    // public function detail($id)
-    // {
-    //     $data['title'] = 'Detail Data Estimasi';
-    //     $data['estimasi'] = $this->Estimasi_model->getEstimasiById($id);
-    //     $this->load->view('templates/header', $data);
-    //     $this->load->view('estimasi/detail', $data);
-    //     $this->load->view('templates/footer');
-    // }
-
-    // public function ubah($id)
-    // {
-    //     $data['title'] = 'Form Ubah Data Estimasi';
-    //     $data['estimasi'] = $this->Estimasi_model->getEstimasiById($id);
+        $this->form_validation->set_rules('no_order', 'No_order', 'required');
 
 
-    //     $this->form_validation->set_rules('biaya_material', 'Biaya_material', 'required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('k_order/tambah', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $this->Order_model->tambahDataOrder();
+            $this->session->set_flashdata('flash', 'Ditambahkan');
+            redirect('konsumen');
+        }
+    }
 
-    //     if ($this->form_validation->run() == false) {
-    //         $this->load->view('templates/header', $data);
-    //         $this->load->view('estimasi/ubah', $data);
-    //         $this->load->view('templates/footer');
-    //     } else {
-    //         $this->Estimasi_model->ubahDataEstimasi();
-    //         $this->session->set_flashdata('flash', 'Diubah');
-    //         redirect('estimasi');
-    //     }
-    // }
+    public function hapus($id)
+    {
+        $this->Order_model->hapusDataOrder($id);
+        $this->session->set_flashdata('flash', 'Dihapus');
+        redirect('konsumen');
+    }
+
+    public function detail($id)
+    {
+        $data['title'] = 'Detail Data Order';
+        $data['order'] = $this->Order_model->getOrderById($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('k_order/detail', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function ubah($id)
+    {
+        $data['title'] = 'Form Ubah Data Order';
+        $data['order'] = $this->Order_model->getOrderById($id);
+
+
+        $this->form_validation->set_rules('no_order', 'No_order', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('k_order/ubah', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $this->Order_model->ubahDataOrder();
+            $this->session->set_flashdata('flash', 'Diubah');
+            redirect('konsumen');
+        }
+    }
 }

@@ -12,6 +12,7 @@ class Dashboard extends CI_Controller
         $this->load->model('M_grafik');
         // $this->load->model('Estimasi_model');
         $this->load->library('form_validation');
+        // is_logged_in();
     }
 
     public function index()

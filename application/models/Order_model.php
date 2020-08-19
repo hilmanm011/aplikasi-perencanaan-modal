@@ -18,6 +18,7 @@ class Order_model extends CI_model
         $data = [
             "no_order" => $this->input->post('no_order', true),
             "tgl_order" => $this->input->post('tgl_order', true),
+            "alamat" => $this->input->post('alamat', true),
             "nama_konsumen" => $this->input->post('nama_konsumen', true),
             "nama_project" => $this->input->post('nama_project', true)
         ];
@@ -41,6 +42,7 @@ class Order_model extends CI_model
         $data = [
             "no_order" => $this->input->post('no_order', true),
             "tgl_order" => $this->input->post('tgl_order', true),
+            "alamat" => $this->input->post('alamat', true),
             "nama_konsumen" => $this->input->post('nama_konsumen', true),
             "nama_project" => $this->input->post('nama_project', true)
         ];
