@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dashboard/index') ?>">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('direktur/index') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-business-time"></i>
         </div>
@@ -122,10 +122,7 @@
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
-                            </a>
+
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -147,7 +144,7 @@
 
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Dashboard Laporan Perusahaan</h1>
                     <a href="<?= base_url('order/print'); ?>" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"> Print Laporan</a>
                 </div>
 
@@ -207,7 +204,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Jumlah Data Order</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $order; ?></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $j_order; ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-cash-register fa-2x text-gray-300"></i>
@@ -268,11 +265,46 @@
                         </script>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
+<!-- Data Tabel Order -->
+<div class="card shadow mb-4">                  
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead class="thead-light">
+                                    <tr class="text-center">
+                                        <th>No</th>
+                                        <th>Nomor Order</th>
+                                        <th>Tanggal Order</th>
+                                        <th>Nama Konsumen</th>
+                                        <th>Nama Project</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php if (empty($order)) : ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            data tidak ditemukan.
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php
+                                    $no = 1;
+                                    foreach ($order as $ord) : ?>
+                                        <tr>
+                                            <td class="text-center"><?= $no;
+                                                                    $no++; ?></td>
+                                            <td class="text-center"><?= $ord['no_order']; ?></td>
+                                            <td><?= $ord['tgl_order']; ?></td>
+                                            <td><?= $ord['nama_konsumen']; ?></td>
+                                            <td><?= $ord['nama_project']; ?></td>
+                                            <td class="text-center"><a href="<?= base_url(); ?>direktur/detail/<?= $ord['id']; ?>" class="badge badge-primary float-center">Detail</a>
+                                            </td>
+                                        </tr> <?php endforeach; ?> </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
     </div>
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">

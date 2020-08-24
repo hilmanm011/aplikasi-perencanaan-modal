@@ -19,7 +19,8 @@ class Direktur extends CI_Controller
     {
         $data['akun'] = $this->Akun_model->getJmlAkun();
         $data['modal'] = $this->Modal_model->getJmlModal();
-        $data['order'] = $this->Order_model->getJmlOrder();
+        $data['j_order'] = $this->Order_model->getJmlOrder();
+        $data['order'] = $this->Order_model->getAllOrder();
         $data['pembayaran'] = $this->Pembayaran_model->getJmlPembayaran();
         $data['data'] = $this->M_grafik->get_data_nominal();
         $data['user'] =  $this->db->get_where('user', ['username' =>
@@ -31,6 +32,15 @@ class Direktur extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('direktur/index', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function detail($id)
+    {
+        $data['title'] = 'Detail Data Order';
+        $data['order'] = $this->Order_model->getOrderById($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('direktur/d_order', $data);
         $this->load->view('templates/footer');
     }
 }

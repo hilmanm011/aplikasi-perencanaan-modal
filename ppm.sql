@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2020 at 08:11 PM
+-- Generation Time: Aug 24, 2020 at 04:37 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -38,9 +38,14 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`id`, `nama`, `alamat`) VALUES
-(1, 'Widya Widd', 'Subang, Jawa Barat'),
-(6, 'Sana Kardi', 'Kp.ciwera RT 04 RW 02'),
-(9, 'heru ggg', 'Kp.ciwera RT 04 RW 02');
+(1, 'Widyawati', 'Subang, Jawa Barat'),
+(6, 'Sana Kardi', 'Pagaden'),
+(9, 'Heru Hermansyah', 'Subang, Jawa Barat'),
+(10, 'Jhon Key', 'Subang, Jawa Barat'),
+(11, 'Muhamad Hilman', 'Subang, Jawa Barat'),
+(12, 'Hermansyah', 'Subang, Jawa Barat'),
+(13, 'Kiki A', 'Subang, Jawa Barat'),
+(14, 'Rendi Pan', 'Subang, Jawa Barat');
 
 -- --------------------------------------------------------
 
@@ -85,7 +90,8 @@ INSERT INTO `estimasi` (`id`, `biaya_material`) VALUES
 (1, '100006'),
 (2, '20000'),
 (3, '66666675'),
-(4, '100000088');
+(4, '100000088'),
+(5, '2000');
 
 -- --------------------------------------------------------
 
@@ -107,7 +113,7 @@ INSERT INTO `modal` (`id`, `biaya_material`, `biaya_pegawai`) VALUES
 (2, '2000', '2059'),
 (3, '5000', '1646'),
 (4, '1111', '1222'),
-(5, '288', '344555');
+(5, '288', '3445');
 
 -- --------------------------------------------------------
 
@@ -120,6 +126,7 @@ CREATE TABLE `order` (
   `no_order` varchar(125) NOT NULL,
   `tgl_order` date NOT NULL,
   `nama_konsumen` varchar(125) NOT NULL,
+  `alamat` varchar(125) NOT NULL,
   `nama_project` varchar(125) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -127,10 +134,14 @@ CREATE TABLE `order` (
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`id`, `no_order`, `tgl_order`, `nama_konsumen`, `nama_project`) VALUES
-(1, 'Order-01', '2020-07-12', 'Hasanul', 'Project '),
-(2, 'Order-02', '2020-07-09', 'hilman mm', 'Project B'),
-(3, 'Order-03', '2020-07-02', 'Hasanul', 'Project B');
+INSERT INTO `order` (`id`, `no_order`, `tgl_order`, `nama_konsumen`, `alamat`, `nama_project`) VALUES
+(1, 'Order-01', '2020-07-12', 'Hasanul Ramadhan', 'Subang', 'Project '),
+(2, 'Order-02', '2020-07-09', 'M Hilman', 'Subang', 'Project B'),
+(3, 'Order-03', '2020-07-02', 'Hasanul', 'Subang', 'Project B'),
+(4, 'Order-05', '2020-07-26', 'Faisal Rizki Adam', 'Subang', 'Project B'),
+(5, '0rder-06', '2020-06-07', 'Rizki Adam', 'Subang', 'Project B'),
+(7, 'Order-019', '2020-08-12', 'Faisaki Adam', 'Subang, Jawa Barat', 'Project A'),
+(8, 'order-67', '2020-08-04', 'Faisal Rizki A', 'subang', 'Project B');
 
 -- --------------------------------------------------------
 
@@ -151,30 +162,27 @@ CREATE TABLE `pembayaran` (
 --
 
 INSERT INTO `pembayaran` (`id`, `no_order`, `tgl_order`, `jenis_pembayaran`, `nominal_pembayaran`) VALUES
-(1, 'P-01', '2020-07-01', 'Pembayaran D', '8000'),
-(2, 'P-02', '2020-07-02', 'Pembayaran A', '1000'),
-(3, 'P-03', '2020-07-03', 'Pembayaran D', '30000'),
-(4, 'P-04', '2020-07-04', 'Pembayaran A', '40000'),
-(5, 'P-05', '2020-07-05', 'Pembayaran B', '5000'),
-(6, 'P-06', '2020-07-06', 'Pembayaran B', '10000'),
-(7, 'P-07', '2020-07-07', 'Pembayaran B', '20000'),
-(8, 'P-08', '2020-07-08', 'Pembayaran B', '10000'),
-(9, 'P-09', '2020-07-09', 'Pembayaran B', '50000'),
-(10, 'P-10', '2020-07-10', 'Pembayaran D', '10000'),
-(11, 'P-11', '2020-07-11', 'Pembayaran B', '30000'),
-(12, 'P-12', '2020-07-11', 'Pembayaran C', '30000'),
-(13, 'P-13', '2020-07-12', 'Pembayaran B', '10000'),
-(14, 'P-14', '2020-07-13', 'Pembayaran D', '10000'),
-(15, 'P-15', '2020-07-14', 'Pembayaran D', '30000'),
-(16, 'P-017', '2020-07-04', 'Pembayaran D', '600'),
-(17, 'P-018', '2020-06-29', 'Pembayaran B', '80000'),
-(18, 'P-019', '2020-07-02', 'Pembayaran D', '600'),
-(19, 'P-020', '2020-07-09', 'Pembayaran A', '8000000'),
-(20, 'P-022', '2020-07-11', 'Pembayaran B', '80000'),
-(21, 'P-023', '2020-07-15', 'Pembayaran C', '8000000'),
-(22, 'P-023', '2020-07-15', 'Pembayaran D', '8000000'),
-(23, 'P-024', '2020-06-29', 'Pembayaran B', '8000000'),
-(24, 'P-028', '2020-07-09', 'Pembayaran B', '600');
+(1, 'P-01', '2020-07-01', 'Cash', '8000'),
+(2, 'P-02', '2020-07-02', 'Tempo', '1000'),
+(3, 'P-03', '2020-07-03', 'Cash', '30000'),
+(4, 'P-04', '2020-07-04', 'Cash', '40000'),
+(5, 'P-05', '2020-07-05', 'Tempo', '5000'),
+(6, 'P-06', '2020-07-06', 'Tempo', '10000'),
+(7, 'P-07', '2020-07-07', 'Cash', '20000'),
+(8, 'P-08', '2020-07-08', 'Tempo', '10000'),
+(9, 'P-09', '2020-07-09', 'Cash', '50000'),
+(10, 'P-10', '2020-07-10', 'Tempo', '10000'),
+(11, 'P-11', '2020-07-11', 'Cash', '30000'),
+(12, 'P-12', '2020-07-11', 'Tempo', '30000'),
+(13, 'P-13', '2020-07-12', 'Cash', '10000'),
+(14, 'P-14', '2020-07-13', 'Tempo', '10000'),
+(15, 'P-15', '2020-07-14', 'Tempo', '30000'),
+(16, 'P-017', '2020-07-04', 'Tempo', '600'),
+(17, 'P-018', '2020-06-29', 'Cash', '80000'),
+(18, 'P-019', '2020-07-02', 'Cash', '600'),
+(19, 'P-020', '2020-07-09', 'Cash', '80000'),
+(20, 'P-022', '2020-07-11', 'Cash', '80000'),
+(25, 'order-01', '2020-08-06', 'Tempo', '80000');
 
 -- --------------------------------------------------------
 
@@ -197,8 +205,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama`, `username`, `password`, `image`, `role_id`, `is_active`) VALUES
-(5, 'Hasanul Ramadhan', 'hasanul', '$2y$10$tUv/q46oNEnmVyZ3mWccG.N3o8CUzAvch5vW4998G5Hlza0MjRx.2', 'default.jpg', 2, 1),
-(6, 'Muhamad Hilman', 'hilman', '$2y$10$orQn4759Cv2EjXHKxi3Vee2Im9E1s2Z8SOaxVn5KmzQHYPEqeOFSu', 'default.jpg', 2, 1);
+(5, 'Hasanul Ramadhan', 'hasanul', '$2y$10$tUv/q46oNEnmVyZ3mWccG.N3o8CUzAvch5vW4998G5Hlza0MjRx.2', 'default.jpg', 1, 1),
+(6, 'Muhamad Hilman', 'hilman', '$2y$10$orQn4759Cv2EjXHKxi3Vee2Im9E1s2Z8SOaxVn5KmzQHYPEqeOFSu', 'default.jpg', 2, 1),
+(7, 'Blodz', 'blodz', '$2y$10$8PzgSI6KUo/SXwc6/If4zeo/tI402waE.3/FWz6a1FuVTR4fECmea', 'default.jpg', 3, 1),
+(8, 'Sana Kardi', 'bld', '$2y$10$6gLiRIiX9aCoyQVIlGJzSOdqf/gOFnSXnj/w0KK3n3VDc94uutymu', 'default.jpg', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -217,7 +227,8 @@ CREATE TABLE `user_role` (
 
 INSERT INTO `user_role` (`id`, `role`) VALUES
 (1, 'Admin'),
-(2, 'Member');
+(2, 'Konsumen'),
+(3, 'Direktur');
 
 --
 -- Indexes for dumped tables
@@ -279,7 +290,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `dashboard`
@@ -291,7 +302,7 @@ ALTER TABLE `dashboard`
 -- AUTO_INCREMENT for table `estimasi`
 --
 ALTER TABLE `estimasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `modal`
@@ -303,25 +314,25 @@ ALTER TABLE `modal`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -6,6 +6,7 @@ class Order extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Order_model');
+        $this->load->model('Pembayaran_model');
         $this->load->library('form_validation');
     }
 
@@ -76,6 +77,9 @@ class Order extends CI_Controller
     public function print()
     {
         $data['order'] = $this->Order_model->getAllOrder();
+        $data['pembayaran'] = $this->Pembayaran_model->getAllPembayaran();
+        $data['j_order'] = $this->Order_model->getJmlOrder();
+        $data['j_pembayaran'] = $this->Pembayaran_model->getJmlPembayaran();
         $this->load->view('print_laporan', $data);
     }
 }
