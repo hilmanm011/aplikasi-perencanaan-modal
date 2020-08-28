@@ -10,61 +10,6 @@ class Auth extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    // public function index()
-    // {
-
-    //     $this->form_validation->set_rules('username', 'Username', 'trim|required');
-    //     $this->form_validation->set_rules('password', 'Password', 'trim|required');
-    //     if ($this->form_validation->run() == false) {
-
-    //         $data['title'] = 'Halaman Login';
-    //         $this->load->view('templates/auth_header', $data);
-    //         $this->load->view('auth/login');
-    //         $this->load->view('templates/auth_footer');
-    //     } else {
-    //         $this->_login();
-    //     }
-    // }
-
-    // private function _login()
-    // {
-    //     $username = $this->input->post('username');
-    //     $password = $this->input->post('password');
-
-    //     $username = $this->db->get_where('user', ['username' => $username])->row_array();
-
-    //     // jika user ada
-    //     if ($username) {
-    //         // jika user aktif
-    //         if ($username['is_active'] == 1) {
-
-    //             // cek password
-    //             if (password_verify($password, $username['password'])) {
-
-    //                 $data = [
-    //                     'username' => $username['username'],
-    //                     'role_id' => $username['role_id']
-    //                 ];
-
-    //                 $this->session->set_userdata($data);
-    //                 redirect('dashboard');
-    //             } else {
-    //                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-    //         Password salah!</div>');
-    //                 redirect('auth');
-    //             }
-    //         } else {
-    //             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-    //         Akun belum active!</div>');
-    //             redirect('auth');
-    //         }
-    //     } else {
-    //         $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
-    //         Akun belum terdaftar!</div>');
-    //         redirect('auth');
-    //     }
-    // }
-
 
     public function index()
     {

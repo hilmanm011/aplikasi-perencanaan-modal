@@ -31,6 +31,7 @@
                     <td><b>Nama Order</b></td>
                     <td><b>Tanggal Order</b></td>
                     <td><b>Nama Konsumen</b></td>
+                    <td><b>Alamat</b></td>
                     <td><b>Nama Project</b></td>
                 </tr>
             </thead>
@@ -42,6 +43,7 @@
                     $no_order = $ord['no_order'];
                     $tgl_order = $ord['tgl_order'];
                     $nama_konsumen = $ord['nama_konsumen'];
+                    $alamat = $ord['alamat'];
                     $nama_project = $ord['nama_project'];
                 ?>
                     <tr>
@@ -49,6 +51,7 @@
                         <td><?= $no_order; ?></td>
                         <td><?= $tgl_order; ?></td>
                         <td><?= $nama_konsumen; ?></td>
+                        <td><?= $alamat; ?></td>
                         <td><?= $nama_project; ?></td>
                     </tr>
             </tbody>

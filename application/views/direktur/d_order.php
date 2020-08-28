@@ -100,54 +100,53 @@
 
             <div class="container-fluid">
 
-            <div class="container-fluid">
-                <!-- Page Heading -->
-                
-                <!-- Data Tabel Order -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary"><a href="<?= base_url('direktur'); ?>" class="btn btn-primary">Kembali</a>
-                    </div>
-                    <div class="card-body">
-                        <div class="card">
-                            <div class="card-header text-center font-weight-bold">
-                                <h3>Detail Data Order</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Nomor Order</th>
-                                                <th>: <?= $order['no_order']; ?></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <th>Tanggal Order</th>
-                                            <th>: <?= $order['tgl_order']; ?></th>
-                                        </tbody>
-                                        <tbody>
-                                            <th>Alamat</th>
-                                            <th>: <?= $order['alamat']; ?></th>
-                                        </tbody>
-                                        <tbody>
-                                            <th>Nama Konsumen</th>
-                                            <th>: <?= $order['nama_konsumen']; ?></th>
-                                        </tbody>
-                                        <tbody>
-                                            <th>Nama Project</th>
-                                            <th>: <?= $order['nama_project']; ?></th>
-                                        </tbody>
-                                        <th</th> <th>
-                                            </th>
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+
+                    <!-- Data Tabel Order -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary"><a href="<?= base_url('direktur'); ?>" class="btn btn-primary">Kembali</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="card-header text-center font-weight-bold">
+                                    <h3>Detail Data Order</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nomor Order</th>
+                                                    <th>: <?= $order['no_order']; ?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <th>Tanggal Order</th>
+                                                <th>: <?= $order['tgl_order']; ?></th>
+                                            </tbody>
+                                            <tbody>
+                                                <th>Nama Konsumen</th>
+                                                <th>: <?= $order['nama_konsumen']; ?></th>
+                                            </tbody>
+                                            <tbody>
+                                                <th>Alamat</th>
+                                                <th>: <?= $order['alamat']; ?></th>
+                                            </tbody>
+                                            <tbody>
+                                                <th>Nama Project</th>
+                                                <th>: <?= $order['nama_project']; ?></th>
+                                            </tbody>
+                                            <th</th> <th>
+                                                </th>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            
         </div>
     </div>
-</div>
-

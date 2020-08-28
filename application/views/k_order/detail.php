@@ -128,12 +128,12 @@
                                             <th>: <?= $order['tgl_order']; ?></th>
                                         </tbody>
                                         <tbody>
-                                            <th>Alamat</th>
-                                            <th>: <?= $order['alamat']; ?></th>
-                                        </tbody>
-                                        <tbody>
                                             <th>Nama Konsumen</th>
                                             <th>: <?= $order['nama_konsumen']; ?></th>
+                                        </tbody>
+                                        <tbody>
+                                            <th>Alamat</th>
+                                            <th>: <?= $order['alamat']; ?></th>
                                         </tbody>
                                         <tbody>
                                             <th>Nama Project</th>

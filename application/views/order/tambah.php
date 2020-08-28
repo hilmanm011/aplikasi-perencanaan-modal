@@ -160,6 +160,11 @@
                                     <small class="form-text text-danger"><?= form_error('nama_konsumen'); ?></small>
                                 </div>
                                 <div class="form-group">
+                                    <label for="alamat">Alamat : </label>
+                                    <input type="text" name="alamat" class="form-control" id="alamat">
+                                    <small class="form-text text-danger"><?= form_error('alamat'); ?></small>
+                                </div>
+                                <div class="form-group">
                                     <label for="nama_project">Nama Project : </label>
                                     <input type="text" name="nama_project" class="form-control" id="nama_project">
                                     <small class="form-text text-danger"><?= form_error('nama_project'); ?></small>

@@ -133,7 +133,7 @@
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                            
+
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -165,8 +165,8 @@
                                         <th>No</th>
                                         <th>Nomor Order</th>
                                         <th>Tanggal Order</th>
-                                        <th>Alamat</th>
                                         <th>Nama Konsumen</th>
+                                        <th>Alamat</th>
                                         <th>Nama Project</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -187,8 +187,8 @@
                                                                     $no++; ?></td>
                                             <td class="text-center"><?= $ord['no_order']; ?></td>
                                             <td><?= $ord['tgl_order']; ?></td>
-                                            <td><?= $ord['alamat']; ?></td>
                                             <td><?= $ord['nama_konsumen']; ?></td>
+                                            <td><?= $ord['alamat']; ?></td>
                                             <td><?= $ord['nama_project']; ?></td>
                                             <td class="text-center"><a href="<?= base_url(); ?>konsumen/detail/<?= $ord['id']; ?>" class="badge badge-primary float-center">Detail</a>
                                                 <a href="<?= base_url(); ?>konsumen/ubah/<?= $ord['id']; ?>" class="badge badge-success float-center">Edit</a>

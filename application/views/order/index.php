@@ -147,6 +147,7 @@
                                         <th>Nomor Order</th>
                                         <th>Tanggal Order</th>
                                         <th>Nama Konsumen</th>
+                                        <th>Alamat</th>
                                         <th>Nama Project</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -168,6 +169,7 @@
                                             <td class="text-center"><?= $ord['no_order']; ?></td>
                                             <td><?= $ord['tgl_order']; ?></td>
                                             <td><?= $ord['nama_konsumen']; ?></td>
+                                            <td><?= $ord['alamat']; ?></td>
                                             <td><?= $ord['nama_project']; ?></td>
                                             <td class="text-center"><a href="<?= base_url(); ?>order/detail/<?= $ord['id']; ?>" class="badge badge-primary float-center">Detail</a>
                                                 <a href="<?= base_url(); ?>order/ubah/<?= $ord['id']; ?>" class="badge badge-success float-center">Edit</a>
