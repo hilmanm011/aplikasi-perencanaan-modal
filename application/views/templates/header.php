@@ -11,7 +11,8 @@
 
   <title><?= $title; ?> </title>
   <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="<?= base_url('assets/'); ?>img/ppm.png" />
+  <link rel="shortcut icon" href="<?= base_url('assets/'); ?>img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?= base_url('assets/'); ?>img/favicon.ico" type="image/x-icon">
 
 
   <!-- Custom fonts for this template-->
